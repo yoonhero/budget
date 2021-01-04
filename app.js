@@ -119,6 +119,7 @@ function paintList(text, money) {
     const delBtn = document.createElement("button");
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteList);
+    delBtn.classList.add("del-btn");
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
     const newId = list.length + 1;

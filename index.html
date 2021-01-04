@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <div>
+    <h5 style="position:absolute;left: 50%;transform: translate(-50%, -50%); margin-top: 4rem;color:#fff; font-size: 10px">Copyright &copy; Yoonhero06</h5>
+    <div class="body">
         <div class="columns is-mobile input">
-            <input type="text" placeholder="title" class="column title_input">
-            <input type="text" placeholder="0$" class="column money_input">
+            <input type="text" placeholder="title" class="column title_input" required>
+            <input type="text" placeholder="0$" class="column money_input" required>
             <button class="btn"></button>
         </div>
         <div class="title">
@@ -22,18 +23,19 @@
         <div class="container">
             <h4><span>총합: </span><span class="all_money"></span><span>원</span></h4>
             <h6>수입: <span class="incomeText">0</span>원<br>소비: <span class="outcomeText">0</span>원</h6>
-
             <canvas class="chart"></canvas>
-
             <div class="main">
                 <div class="toggle">
                     <div class="tab1">수입</div>
                     <div class="tab2 activate">소비</div>
                 </div>
                 <ul class="list">
+
                 </ul>
+
             </div>
         </div>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="./app.js"></script>
