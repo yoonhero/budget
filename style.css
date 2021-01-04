@@ -246,4 +246,7 @@ input {
     .toggle div {
         font-size: 20px;
     }
+    h5 {
+        margin-top: 1px;
+    }
 }
