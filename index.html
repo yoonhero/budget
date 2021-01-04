@@ -6,33 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가계부</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div>
-        <div class="input">
-            <input type="text" placeholder="쓴곳" class="money-input">
-            <input type="text" placeholder="쓴돈" class="place-input">
-            <button class="btn plus">+</button>
+        <div class="columns is-mobile input">
+            <input type="text" placeholder="title" class="column title_input">
+            <input type="text" placeholder="0$" class="column money_input">
+            <button class="btn"></button>
         </div>
         <div class="title">
             <h3>가계부</h3>
         </div>
         <div class="container">
             <h4><span>총합: </span><span class="all_money"></span><span>원</span></h4>
-            <canvas>canvas</canvas>
+            <h6>수입: <span class="incomeText">0</span>원<br>소비: <span class="outcomeText">0</span>원</h6>
+
+            <canvas class="chart"></canvas>
+
             <div class="main">
                 <div class="toggle">
-                    <div class="tab1">소비</div>
-                    <div class="tab2">수입</div>
+                    <div class="tab1">수입</div>
+                    <div class="tab2 activate">소비</div>
                 </div>
                 <ul class="list">
-                    <li>hello?</li>
-                    <li>2020 -20000원</li>
                 </ul>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="./app.js"></script>
 </body>
 

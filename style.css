@@ -55,15 +55,24 @@ body {
     color: #67809f;
 }
 
+.container h6 {
+    position: absolute;
+    width: 315px;
+    height: 44px;
+    left: 50px;
+    top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 42px;
+    color: #67809f;
+}
+
 .container canvas {
     position: absolute;
-    width: 160px;
-    height: 160px;
-    right: 10px;
+    right: -80px;
     top: 1rem;
-    background: #95a5a6;
     z-index: 1;
-    border-radius: 50%;
 }
 
 .tab1 {
@@ -110,52 +119,104 @@ body {
     line-height: 30px;
 }
 
+.list li {
+    width: 25rem;
+    grid-template-columns: repeat(3, auto);
+}
+
+.list li span {
+    margin-right: 3rem;
+}
+
 .tab1:hover,
 .tab2:hover {
     color: #eeeeee;
 }
 
-.tab1::after,
-.tab2::after {
+.activate {
     color: #eeeeee;
 }
 
 .input {
-    position: fixed;
-    bottom: 0;
+    height: auto;
+    position: absolute;
+    top: 8vh;
     z-index: 10;
-    left: 50%;
+    left: 60%;
     transform: translate(-50%);
-    width: 80%;
+    width: 50%;
     margin: 0;
     padding: 0;
     background-color: #f2f1ef;
     border-radius: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    border-radius: 20px;
 }
 
 input {
-    width: 44%;
+    left: 10px;
     border: none;
     height: 4vh;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    margin: 5px 0 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .btn {
+    text-align: center;
     height: 4vh;
     width: 4vh;
-    border: solid 1px #ccc;
-    font-size: larger;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    border-radius: 50%;
+    border: none;
+    transition: box-shadow 400ms cubic-bezier(.2, 0, .7, 1), transform 200ms cubic-bezier(.2, 0, .7, 1);
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.btn:after {
+    content: "+";
+    line-height: 1.1em;
+    color: #eeeeee;
 }
 
 .btn:hover {
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-    color: #6c7a89;
+    color: #29323b;
+}
+
+.hide {
+    display: none;
+}
+
+.incomeTextMoney {
+    color: #2abb9b;
+}
+
+.outcomeTextMoney {
+    color: #f22613;
 }
 
 @media (max-width: 768px) {
     .title {
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    .input {
+        position: fixed;
+        top: 95%;
+        z-index: 10;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 4rem;
+        border-radius: 20px;
     }
 }
